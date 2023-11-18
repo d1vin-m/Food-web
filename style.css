@@ -1,0 +1,79 @@
+body{
+    background-color: #FFEAE0;
+    overflow-x: hidden;
+}
+:root{
+    --bg-orange: #FD5717;
+}
+.bg-orange{
+    background-color: var(--bg-orange);
+}
+.btn-orange{
+    background-color: var(--bg-orange);
+}
+.text-orange{
+    color: var(--bg-orange);
+}
+ul li{
+
+    position: relative;
+}
+#active{
+    color: black;
+}
+ul li a::after{
+    content: '';
+    width: 0;
+    height: 2.5px;
+    position: absolute;
+    background-color: var(--bg-orange);
+    bottom: 1px;
+    left: 18px;
+}
+#active::after{
+    content: '';
+    width: 35%;
+    height: 2.5px;
+    position: absolute;
+    background-color: var(--bg-orange);
+    bottom: 1px;
+    left: 18px;
+    border-radius: 2px;
+}
+ul li a:hover::after{
+    width: 35%;
+    transition: 0.5s all ease-in-out;
+}
+#icon{
+    background-color: var(--bg-orange);
+    border-radius: 50%;
+    padding: 5px;
+    color: white;
+}
+#card-image{
+    position: absolute;
+    width: 45%;
+    top: -4.5rem;
+    left: 5rem;
+    /* box-shadow: 1px 1px 1px #FFEAE0; */
+}
+@media (max-width:768px) {
+    #active::after{
+        width: 0%;
+    }
+    ul li a:hover::after{
+        width: 0;
+    }
+    #text{
+        position: relative;
+        left: 5rem;
+        top: 3rem;
+        font-weight: bolder;
+    }
+    #image{
+        opacity: 0.5;
+        right: -1.5rem;
+        position: absolute;
+        z-index: -1;
+    }
+}
